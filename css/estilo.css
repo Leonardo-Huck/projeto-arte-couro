@@ -1,0 +1,164 @@
+body {
+    background: #ffffff;
+    font: 12px "Lucida Grande", "Lucida Sans Unicode", Arial, Sans-serif;
+}
+
+/* NAV */
+header {
+    background: #f4f2ec url(../img/fundo.jpg) repeat-x;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    height: 80px;
+}
+
+a:link,
+a:active,
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+
+}
+
+a:hover {
+    border-bottom: 1px solid #ffffff;
+}
+
+#logo {
+    float: left;
+    height: 50px;
+    width: auto;
+}
+
+#logo>a:hover {
+    border-bottom: none;
+}
+
+#logo-img {
+    height: 80px;
+    width: auto;
+    margin: 0 auto;
+}
+
+nav {
+    margin: 10px;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 20px;
+    float: right;
+}
+
+nav ul li {
+    float: left;
+}
+
+nav ul li a:link {
+    display: block;
+    margin-right: 25px;
+    padding-bottom: 3px;
+    text-transform: uppercase;
+}
+
+.destaque {
+    clear: both;
+    position: relative;
+    height: 500px;
+    width: auto;
+    background-repeat: no-repeat;
+    background-position: right 80% bottom 45%;
+    background-size: 100%;
+    background-attachment: fixed;
+}
+
+.destaque {
+    background-image: url(../img/destaque-home.jpg);
+}
+
+/*Cards*/
+
+.icone-card {
+    width: 60px;
+    height: auto;
+    margin-right: 20px;
+    margin-left: 60px;
+    padding: 20px;
+}
+
+.cards {
+    width: 100%;
+    float: left;
+    margin: 30px 0 20px 10px;
+}
+
+.card {
+    float: left;
+}
+
+#texto-material-card,
+#texto-parcelamento-card,
+#texto-frete-card {
+    border-left: 2px solid #000;
+    padding-left: 30px;
+    margin-top: 30px;
+}
+
+/* Container dos produtos */
+#container {
+    width: 1080px;
+    margin: 0 auto;
+}
+
+#conteudo {
+    float: left;
+}
+
+h1 {
+    font: 10px sans-serif;
+}
+
+.imagem-produto {
+    height: auto;
+    width: 200px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+
+}
+
+.produto {
+    float: left;
+    width: 200px;
+    height: 350px;
+    border-radius: 8px;
+    padding: 0 20px 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px 0 rgba(55, 55, 55, 0.2), 0 6px 20px 0 rgba(55, 55, 55, 0.19);
+    margin: 20px 0px 20px 20px;
+}
+
+h4 {
+    font-size: 1.3em;
+    color: rgb(241, 50, 50);
+}
+
+.produto:hover {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+/* Rodape */
+
+footer {
+    color: #fff;
+    clear: both;
+    padding: 20px 0;
+    text-align: center;
+    background-color: #2b2b2b;
+    margin-top: 20px;
+    width: 100%;
+}
+
+footer>p a {
+    padding: 2px 10px;
+}
