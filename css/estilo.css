@@ -89,7 +89,7 @@ nav ul li a:link {
 .cards {
     width: 100%;
     float: left;
-    margin: 30px 0 20px 10px;
+    margin: 30px 0 20px 80px;
 }
 
 .card {
@@ -146,12 +146,46 @@ h4 {
     box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2), 0 10px 30px 0 rgba(0, 0, 0, 0.19);
 }
 
+/* Newletter */
+
+#news {
+    width: 100%;
+    float: left;
+    margin: 30px 0 30px 80px;
+    padding: 50px 0 50px 0;
+}
+
+form {
+    float: left;
+}
+
+#newsletter {
+    float: left;
+    height: 100px;
+    width: auto;
+    margin: 5px 50px;
+}
+
+#assinar {
+    padding: 10px;
+    color: #fff;
+    background-color: #000;
+}
+
+#label-email {
+    font-size: 1.3em;
+}
+
+#email {
+    margin-right: 10px;
+    font-size: 1.2em;
+}
 
 /* Rodape */
 
 footer {
-    color: #fff;
     clear: both;
+    color: #fff;
     padding: 20px 0;
     text-align: center;
     background-color: #2b2b2b;
