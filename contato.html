@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Arte Couro Acessórios - Contato</title>
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/estilo-contato.css">
     <link rel="stylesheet" href="css/normalize.css">
 </head>
 
@@ -25,12 +26,25 @@
 
     <div id="container">
         <main id="principal">
-            <h1>NOSSO CONTATO</h1>
+            <h1 id="h1-contato">MANDE-NOS UMA MENSAGEM!</br>
+                É SEMPRE BOM CONVERSAR COM VOCÊ!</h1>
             <div id="conteudo">
-
+                <div id="contato"></div>
+                <form id="formulario">
+                    <fieldset id="fieldset">
+                        <label for="nome">Nome</label>
+                        <input class="campo" type="text" id="nome">
+                        <label for="email">E-Mail</label>
+                        <input class="campo" type="email" id="email">
+                        <label for="mensagem">Mensagem</label>
+                        <input class="campo" type="text" id="mensagem">
+                    </fieldset>
+                    <input class="botao" type="submit" onclick="contato()">
+                </form>
+            </div>
         </main>
     </div>
-    <footer id="rodape">
+    <footer id=" rodape">
         <p class="link-rodape">
             <a href="index.html" class="rodape"><strong>Home</strong></a>
             <a href="produtos.html" class="rodape"><strong>Produtos</strong></a>
@@ -39,6 +53,7 @@
         </p>
         <p>2024 <a href="#"><strong>Arte Couro</strong></a> - Todos os direitos reservados &copy;</p>
     </footer>
+    <script src="./script/script.js"></script>
 </body>
 
 </html>

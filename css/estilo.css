@@ -231,6 +231,32 @@ form {
     font-size: 1.2em;
 }
 
+/* Galeria */
+.galeria {
+    float: left;
+}
+
+.item-galeria {
+    float: left;
+    width: 250px;
+    height: 250px;
+    border-radius: 8px;
+    padding: 0 20px 10px 20px;
+    background-color: #ffffff;
+    box-shadow: 0 2px 2px 0 rgba(55, 55, 55, 0.2), 0 6px 20px 0 rgba(55, 55, 55, 0.19);
+    margin: 20px 0px 20px 20px;
+    background-position: center;
+    background-size: cover;
+}
+
+.item-galeria:hover {
+    box-shadow: 0 10px 15px 0 rgba(60, 60, 60, 0.3), 0 6px 20px 0 rgb(60, 60, 60);
+}
+
+#caracol {
+    background-image: url(../img/galeria/Havana-4cm2.jpg);
+}
+
 /* Rodape */
 
 footer {
