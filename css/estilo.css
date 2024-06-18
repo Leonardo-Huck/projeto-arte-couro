@@ -109,6 +109,10 @@ nav ul li a:link {
     width: 1080px;
     margin: 0 auto;
 }
+#container-galeria {
+    width: 1266px;
+    margin: 0 auto;
+}
 
 #conteudo {
     float: left;
@@ -201,7 +205,7 @@ h4 {
 #news {
     width: 100%;
     float: left;
-    margin: 30px 0 30px 80px;
+    margin: 30px 0 30px 100px;
     padding: 50px 0 50px 0;
 }
 
@@ -255,6 +259,33 @@ form {
 
 #caracol {
     background-image: url(../img/galeria/Havana-4cm2.jpg);
+}
+#bolsa-mel-01 {
+    background-image: url(../img/galeria/bolsa-mel-01.jpeg);
+}
+#crazy-horse {
+    background-image: url(../img/galeria/crazy-horse.png);
+}
+#papelaria {
+    background-image: url(../img/galeria/papelaria.jpeg);
+}
+#cinto-branco-1 {
+    background-image: url(../img/galeria/cinto-branco-1.jpeg);
+}
+#cinto-branco-2 {
+    background-image: url(../img/galeria/cinto-branco-2.jpeg);
+}
+#lacos-1 {
+    background-image: url(../img/galeria/lacos-1.jpeg);
+}
+#lacos-2 {
+    background-image: url(../img/galeria/lacos-2.jpeg);
+}
+#carteira-slin {
+    background-image: url(../img/galeria/carteira-slim.jpg);
+}
+#cadarco {
+    background-image: url(../img/galeria/cadarco.jpg);
 }
 
 /* Rodape */
