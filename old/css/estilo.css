@@ -4,38 +4,35 @@ body {
 }
 
 /* NAV */
-
-
 header {
     background: #f4f2ec url(../img/fundo.jpg) repeat-x;
     width: 100%;
     margin: 0 auto;
+    padding: 10px;
+    height: 80px;
 }
-
 
 a:link,
 a:active,
 a:visited {
     color: #ffffff;
     text-decoration: none;
+
 }
 
 a:hover {
     border-bottom: 1px solid #ffffff;
 }
 
-#logo:hover {
-    border-bottom: none;
-}
-
-/*
 #logo {
     float: left;
     height: 50px;
     width: auto;
 }
 
-
+#logo>a:hover {
+    border-bottom: none;
+}
 
 #logo-img {
     height: 80px;
@@ -81,8 +78,6 @@ nav ul li a:link {
 
 /*Cards*/
 
-/*
-
 .icone-card {
     width: 60px;
     height: auto;
@@ -110,13 +105,10 @@ nav ul li a:link {
 }
 
 /* Container dos produtos */
-
-/*
 #container {
     width: 1080px;
     margin: 0 auto;
 }
-
 #container-galeria {
     width: 1266px;
     margin: 0 auto;
@@ -160,7 +152,7 @@ h4 {
 }
 
 /* Categorias */
-/*
+
 #categorias {
     float: left;
     margin: 0 auto;
@@ -209,7 +201,7 @@ h4 {
 }
 
 /* Newletter */
-/*
+
 #news {
     width: 100%;
     float: left;
@@ -244,7 +236,6 @@ form {
 }
 
 /* Galeria */
-/*
 .galeria {
     float: left;
 }
@@ -269,45 +260,36 @@ form {
 #caracol {
     background-image: url(../img/galeria/Havana-4cm2.jpg);
 }
-
 #bolsa-mel-01 {
     background-image: url(../img/galeria/bolsa-mel-01.jpeg);
 }
-
 #crazy-horse {
     background-image: url(../img/galeria/crazy-horse.png);
 }
-
 #papelaria {
     background-image: url(../img/galeria/papelaria.jpeg);
 }
-
 #cinto-branco-1 {
     background-image: url(../img/galeria/cinto-branco-1.jpeg);
 }
-
 #cinto-branco-2 {
     background-image: url(../img/galeria/cinto-branco-2.jpeg);
 }
-
 #lacos-1 {
     background-image: url(../img/galeria/lacos-1.jpeg);
 }
-
 #lacos-2 {
     background-image: url(../img/galeria/lacos-2.jpeg);
 }
-
 #carteira-slin {
     background-image: url(../img/galeria/carteira-slim.jpg);
 }
-
 #cadarco {
     background-image: url(../img/galeria/cadarco.jpg);
 }
 
 /* Rodape */
-/*
+
 footer {
     clear: both;
     color: #fff;
@@ -321,5 +303,3 @@ footer {
 footer>p a {
     padding: 2px 10px;
 }
-
-*/

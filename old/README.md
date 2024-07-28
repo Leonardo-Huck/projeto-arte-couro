@@ -1,5 +1,5 @@
 # Projeto Arte Couro
-Aprimoramento do Exercício do Módulo 03 do Curso Full Stack Jr. da +praTi
+Landing page simples utilizando HTML, CSS e JavaScript. Exercício do Módulo 03 do Curso Full Stack Jr. da +praTi
 
 ## 🔗 Para acessar o site diretamente:
 
