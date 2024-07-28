@@ -12,8 +12,8 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-dark navbar-expand-lg header">
-            <div class="container-fluid col-12">
+        <nav class="navbar navbar-dark navbar-expand-md header">
+            <div class="container-fluid">
                 <a class="navbar-brand col-6" id="logo" href="/index.html">
                     <img src="./img/logo-branco-peq.png" alt="ArteCouro" width="auto" height="70">
                 </a>
@@ -24,116 +24,176 @@
                 <div class="collapse navbar-collapse col-6 justify-content-center" id="navbarNav">
                     <ul class="navbar-nav gap-3">
                         <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="/index.html">Home</a>
+                            <a class="nav-link" aria-current="page" href="#">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/produtos.html">Produtos</a>
+                            <a class="nav-link" href="#">Produtos</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/galeria.html">Galeria</a>
+                            <a class="nav-link" href="#">Galeria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/contato.html">Contato</a>
+                            <a class="nav-link" href="#">Contato</a>
                         </li>
                     </ul>
                 </div>
             </div>
         </nav>
     </header>
+
     <div class="destaque">
     </div>
-    <div class="cards">
-        <div class="card">
+
+    <div class="container d-flex align-items-center text-center cards">
+        <div class="col-2">
             <img src="img/couro.png" alt="" class="icone-card">
         </div>
-        <div class="card" id="texto-material-card">
+        <div class="col-2" id="texto-material-card">
             <p>Materiais de qualidade.
                 Feito para durar.</p>
         </div>
-        <div class="card">
+        <div class="col-2">
             <img src="img/cartao-de-credito.png" alt="" class="icone-card">
         </div>
-        <div class="card" id="texto-parcelamento-card">
+        <div class="col-2" id="texto-parcelamento-card">
             <p>Parcelamento facilitado</p>
         </div>
-        <div class="card">
+        <div class="col-2">
             <img src="img/caminhao-de-entrega.png" alt="" class="icone-card">
         </div>
-        <div class="card" id="texto-frete-card">
+        <div class="col-2" id="texto-frete-card">
             <p>Aproveite as promoções de frete grátis</p>
         </div>
     </div>
+
     <div id="container">
         <main id="principal">
-            <h1>RECOMENDADO PARA VOCÊ</h1>
-            <div id="conteudo">
-                <div id="bolsa" class="produto"
-                    onclick="popUP(
-                    'https://shopee.com.br/Bolsa-Tiracolo-Couro-Legitimo-Feita-a-M%C3%A3o-i.539394589.22304192260?xptdk=f95ab1e6-b4f3-4253-a320-34b4d49dfd22')">
-                    <img src="img/produtos/bolsa/bolsa-0.jpg" class="imagem-produto">
-                    <h3>Bolsa Tiracolo Couro Legitimo Feita a Mão</h3>
-                    <h4>R$ 120,00</h4>
-                </div>
-                <div id="ouro-velho-2cm" class="produto"
-                    onclick="popUP('https://shopee.com.br/Cinto-de-couro-feminino-fivela-ouro-velho-cinto-fino-2cm-i.539394589.10757268361?sp_atk=25ed506e-8541-4610-b5b1-116c0b2b58e7')">
-                    <img src="img/produtos/ouro-velho-2cm/ouro-velho-2cm-0.jpg" class="imagem-produto">
-                    <h3>Cinto de couro feminino fivela ouro velho cinto fino 2cm</h3>
-                    <h4>R$32,00 - R$37,50</h4>
-                </div>
-                <div id="ouro-velho-25mm" class="produto"
-                    onclick="popUP('https://shopee.com.br/Cinto-de-Couro-Feminino-Leg%C3%ADtimo-Fivela-Ouro-Velho-Desenhada-2-5cm-i.539394589.13413940764')">
-                    <img src="img/produtos/ouro-velho-25mm/ouro-velho-25mm-0.jpg" class="imagem-produto">
-                    <h3>Cinto de couro feminino fivela ouro velho 2,5cm</h3>
-                    <h4>R$38,00 - R$39,00</h4>
-                </div>
-                <div id="ouro-velho-3cm" class="produto">
-                    <img src="img/produtos/ouro-velho-3cm/ouro-velho-3cm-0.jpg" class="imagem-produto"
-                        onclick="popUP('https://shopee.com.br/Cinto-de-Couro-Feminino-Leg%C3%ADtimo-Fivela-Ouro-Velho-Desenhada-3-cm-i.539394589.21417755196?xptdk=af2aeb83-8532-4dcb-b0aa-e7cf0dbbccac')">
-                    <h3>Cinto de couro feminino fivela ouro velho 3cm</h3>
-                    <h4>R$37,50 - R$39,50</h4>
-                </div>
-                <div id="prata-velha-3cm" class="produto">
-                    <img src="img/produtos/prata-velha/cinto-prata-velha.jpg" class="imagem-produto"
-                        onclick="popUP('https://shopee.com.br/Cinto-de-Couro-Feminino-Legitimo-Fivela-Prata-Velha-3CM-i.539394589.19216510879?xptdk=59f10234-8006-4a5a-b101-212737a47e4a')">
-                    <h3>Cinto de couro feminino fivela prata velha 3cm</h3>
-                    <h4>R$34,00 - R$37,50</h4>
-                </div>
-                <div id="carteira" class="produto">
-                    <img src="img/produtos/carteira/carteira-0.jpg" class="imagem-produto"
-                        onclick="popUP('https://shopee.com.br/Carteira-Slim-Masculina-Couro-Legitimo-para-CNH-ou-Identidade-Nova-i.539394589.22593064377?xptdk=dabd8201-ec86-4a55-bd18-2a43fa990d2d')">
-                    <h3>Carteira Slim Masculina Couro Legitimo para CNH ou Identidade</h3>
-                    <h4>R$25,99</h4>
-                </div>
-                <div id="lona" class="produto">
-                    <img src="img/produtos/lona/lona-0.jpg" class="imagem-produto"
-                        onclick="popUP('https://shopee.com.br/Cinto-de-Lona-Masculino-Cor-Caramelo-Estonado-e-Couro-Leg%C3%ADtimo-i.539394589.19541912160')">
-                    <h3>Cinto de Lona Masculino Cor Caramelo Estonado e Couro Legítimo</h3>
-                    <h4>R$55,00 - R$58,50</h4>
+            <h1 class="fs-2 h1">RECOMENDADO PARA VOCÊ</h1>
+            <div class="container">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 g-2 g-sm-3 g-lg-4">
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/bolsa/bolsa-0.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Bolsa Tiracolo Couro Legitimo Feita a Mão</h5>
+                                <p class="card-text text-danger">R$ 120,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/ouro-velho-2cm/ouro-velho-2cm-0.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cinto de couro feminino fivela ouro velho cinto fino 2cm</h5>
+                                <p class="card-text text-danger">R$32,00 - R$37,50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/ouro-velho-25mm/ouro-velho-25mm-0.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cinto de couro feminino fivela ouro velho 2,5cm</h5>
+                                <p class="card-text text-danger">R$38,00 - R$39,00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/ouro-velho-3cm/ouro-velho-3cm-0.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cinto de couro feminino fivela ouro velho 3cm</h5>
+                                <p class="card-text text-danger">R$37,50 - R$39,50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/prata-velha/cinto-prata-velha.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cinto de couro feminino fivela prata velha 3cm</h5>
+                                <p class="card-text text-danger">R$34,00 - R$37,50</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/carteira/carteira-0.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Carteira Slim Masculina Couro Legitimo para CNH ou Identidade
+                                </h5>
+                                <p class="card-text text-danger">R$25,99</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col">
+                        <div class="card h-100">
+                            <img src="img/produtos/lona/lona-0.jpg" class="card-img-top">
+                            <div class="card-body">
+                                <h5 class="card-title">Cinto de Lona Masculino Cor Caramelo Estonado e Couro Legítimo
+                                </h5>
+                                <p class="card-text text-danger">R$55,00 - R$58,50</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h1>CONHEÇA NOSSAS CATEGORIAS</h1>
+            <h1 class="fs-2 h1">CONHEÇA NOSSAS CATEGORIAS</h1>
             <div id="categorias">
-                <div id="categoria-feminina" class="categoria">
-                    <p>FEMININO</p>
-                </div>
-                <div id="categoria-masculina" class="categoria">
-                    <p>MASCULINO</p>
-                </div>
-                <div id="categoria-infantil" class="categoria">
-                    <p>INFANTIL</p>
-                </div>
-                <div id="categoria-pets" class="categoria">
-                    <p>PETS</p>
+                <div class="container">
+                    <div class="row row-cols-1 row-cols-md-2 g-4">
+                        <div class="col">
+                            <div class="card h-100 categoria">
+                                <img src="./img/categorias/Feminino/categoria-acessorios-femininos.jpg"
+                                    class="card-img-top">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title text-white fs-2">FEMININO</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 categoria">
+                                <img src="./img/categorias/Masculino/categoria-acessorios-masculinos.jpg"
+                                    class="card-img-top">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title text-white fs-2">MASCULINO</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 categoria">
+                                <img src="./img/categorias/Infantil/categoria-acessorios-infantis.jpg"
+                                    class="card-img-top">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title text-white fs-2">INFANTIL</h5>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="card h-100 categoria">
+                                <img src="./img/categorias/Pets/categoria-acessorios-pets.jpg" class="card-img-top">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title text-white fs-2">PETS</h5>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div id="news">
-                <img src="./img/o-email.png" alt="imagem de uma carta" id="newsletter">
-                <div id="form">
-                    <h2>ASSINE NOSSA NEWSLETTER E RECEBA PROMOÇÕES EXCLUSIVAS!</h2>
+            <div class="container-fluid row align-items-center newsletter m-0">
+                <div class="col-3 text-end">
+                    <img src="./img/o-email.png" alt="imagem de uma carta" id="newsletter">
+                </div>
+                <div class="col-9 col-md-7">
                     <form>
-                        <label for="email" id="label-email">E-MAIL</label>
-                        <input type="email" name="email" id="email" style="width: 400px; height: 30px;">
-                        <input class="botao" type="submit" value="ASSINAR" id="assinar" onclick="cadastrarEmail()">
+                        <div class="container gap-4">
+                            <h2 class="fs-3 row g-1">ASSINE NOSSA NEWSLETTER E RECEBA PROMOÇÕES EXCLUSIVAS!</h2>
+                            <div class="d-flex gap-1 gap-md-4 mb-2">
+                                <input type="email" class="form-control" id="exampleInputEmail1"
+                                    aria-describedby="emailHelp" placeholder="E-MAIL">
+                                <button type="submit" class="btn btn-dark">Submit</button>
+                            </div>
+                        </div>
                     </form>
                 </div>
             </div>
@@ -142,9 +202,9 @@
     <footer id="rodape">
         <p class="link-rodape">
             <a href="index.html" class="rodape"><strong>Home</strong></a>
-            <a href="produtos.html" class="rodape"><strong>Produtos</strong></a>
-            <a href="galeria.html" class="rodape"><strong>Galeria</strong></a>
-            <a href="contato.html" class="rodape"><strong>Contato</strong></a>
+            <a href="#" class="rodape"><strong>Produtos</strong></a>
+            <a href="#" class="rodape"><strong>Galeria</strong></a>
+            <a href="#" class="rodape"><strong>Contato</strong></a>
         </p>
         <p>2024 <a href="#"><strong>Arte Couro</strong></a> - Todos os direitos reservados &copy;</p>
     </footer>
