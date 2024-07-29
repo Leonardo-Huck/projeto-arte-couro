@@ -14,8 +14,8 @@
     <header>
         <nav class="navbar navbar-dark navbar-expand-md header">
             <div class="container-fluid">
-                <a class="navbar-brand col-6" id="logo" href="/index.html">
-                    <img src="./img/logo-branco-peq.png" alt="ArteCouro" width="auto" height="70">
+                <a class="navbar-brand col-5" id="logo" href="/index.html">
+                    <img src="./img/logo-branco-peq.png" alt="ArteCouro" width="auto" height="85">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -33,12 +33,54 @@
                             <a class="nav-link" href="#">Galeria</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
+                            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#exampleModal"
+                                data-bs-whatever="@mdo" href="#">Contato</a>
                         </li>
                     </ul>
                 </div>
+                <div class="col-1">
+                    <img src="./img/carrinho.png" width="auto" height="40">
+                    <span class="position-absolute top-49 start-96 translate-middle badge rounded-pill bg-danger">
+                        <span id="carrinho">0</span>
+                        <span class="visually-hidden">unread messages</span>
+                    </span>
+                </div>
             </div>
         </nav>
+        <div id="modal">
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">Entre em Contato Conosco</h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="col-form-label">Nome:</label>
+                                    <input type="text" class="form-control" id="name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="recipient-name" class="col-form-label">E-mail:</label>
+                                    <input type="email" class="form-control" id="recipient-name" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label">Mensagem:</label>
+                                    <textarea class="form-control" id="message-text" required></textarea>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fechar</button>
+                            <button type="submit" class="btn btn-primary" onclick="alert('Mensagem enviada!')"
+                                data-bs-dismiss="modal">Enviar</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
 
     <div class="destaque">
@@ -76,8 +118,11 @@
                             <img src="img/produtos/bolsa/bolsa-0.jpg" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Bolsa Tiracolo Couro Legitimo Feita a Mão</h5>
-                                <p class="card-text text-danger">R$ 120,00</p>
+                                <p class="card-text text-danger fw-semibold">R$ 120,00</p>
                             </div>
+                            <button type="button" class="btn btn-dark"
+                                onclick="registerTask(1,'Bolsa Tiracolo Couro Legitimo Feita a Mão', 120)">Adicionar ao
+                                Carrinho</button>
                         </div>
                     </div>
                     <div class="col">
@@ -85,8 +130,11 @@
                             <img src="img/produtos/ouro-velho-2cm/ouro-velho-2cm-0.jpg" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Cinto de couro feminino fivela ouro velho cinto fino 2cm</h5>
-                                <p class="card-text text-danger">R$32,00 - R$37,50</p>
+                                <p class="card-text text-danger fw-semibold">R$37,50</p>
                             </div>
+                            <button type="button" class="btn btn-dark"
+                                onclick="registerTask(2, 'Cinto de couro feminino fivela ouro velho cinto fino 2cm', 37.50)">Adicionar
+                                ao Carrinho</button>
                         </div>
                     </div>
                     <div class="col">
@@ -94,17 +142,23 @@
                             <img src="img/produtos/ouro-velho-25mm/ouro-velho-25mm-0.jpg" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Cinto de couro feminino fivela ouro velho 2,5cm</h5>
-                                <p class="card-text text-danger">R$38,00 - R$39,00</p>
+                                <p class="card-text text-danger fw-semibold">R$39,00</p>
                             </div>
+                            <button type="button" class="btn btn-dark"
+                                onclick="registerTask(3, 'Cinto de couro feminino fivela ouro velho 2,5cm', 39)">Adicionar
+                                ao Carrinho</button>
                         </div>
                     </div>
-                    <div class="col">
+                    <div class=" col">
                         <div class="card h-100">
                             <img src="img/produtos/ouro-velho-3cm/ouro-velho-3cm-0.jpg" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Cinto de couro feminino fivela ouro velho 3cm</h5>
-                                <p class="card-text text-danger">R$37,50 - R$39,50</p>
+                                <p class="card-text text-danger fw-semibold">R$39,50</p>
                             </div>
+                            <button type="button" class="btn btn-dark"
+                                onclick="registerTask(4, 'Cinto de couro feminino fivela ouro velho 3cm', 39.50)">Adicionar
+                                ao Carrinho</button>
                         </div>
                     </div>
                     <div class="col">
@@ -112,8 +166,11 @@
                             <img src="img/produtos/prata-velha/cinto-prata-velha.jpg" class="card-img-top">
                             <div class="card-body">
                                 <h5 class="card-title">Cinto de couro feminino fivela prata velha 3cm</h5>
-                                <p class="card-text text-danger">R$34,00 - R$37,50</p>
+                                <p class="card-text text-danger fw-semibold">R$37,50</p>
                             </div>
+                            <button type="button" class="btn btn-dark"
+                                onclick="registerTask(5, 'Cinto de couro feminino fivela prata velha 3cm', 37.50)">Adicionar
+                                ao Carrinho</button>
                         </div>
                     </div>
                     <div class="col">
@@ -122,18 +179,25 @@
                             <div class="card-body">
                                 <h5 class="card-title">Carteira Slim Masculina Couro Legitimo para CNH ou Identidade
                                 </h5>
-                                <p class="card-text text-danger">R$25,99</p>
+                                <p class="card-text text-danger fw-semibold">R$25,99</p>
                             </div>
+                            <button type="button" class="btn btn-dark"
+                                onclick="registerTask(6, 'Carteira Slim Masculina Couro Legitimo para CNH ou Identidade', 25.99)">Adicionar
+                                ao Carrinho</button>
                         </div>
                     </div>
                     <div class="col">
                         <div class="card h-100">
                             <img src="img/produtos/lona/lona-0.jpg" class="card-img-top">
                             <div class="card-body">
-                                <h5 class="card-title">Cinto de Lona Masculino Cor Caramelo Estonado e Couro Legítimo
+                                <h5 class="card-title">Cinto de Lona Masculino Cor Caramelo Estonado e Couro
+                                    Legítimo
                                 </h5>
-                                <p class="card-text text-danger">R$55,00 - R$58,50</p>
+                                <p class="card-text text-danger fw-semibold">R$58,50</p>
                             </div>
+                            <button type="button" class="btn btn-dark"
+                                onclick="registerTask(7, 'Cinto de Lona Masculino Cor Caramelo Estonado e Couro Legítimo', 58.50)">Adicionar
+                                ao Carrinho</button>
                         </div>
                     </div>
                 </div>
@@ -204,7 +268,8 @@
             <a href="index.html" class="rodape"><strong>Home</strong></a>
             <a href="#" class="rodape"><strong>Produtos</strong></a>
             <a href="#" class="rodape"><strong>Galeria</strong></a>
-            <a href="#" class="rodape"><strong>Contato</strong></a>
+            <a class="rodape" data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@mdo"
+                href="#"><strong>Contato</strong></a>
         </p>
         <p>2024 <a href="#"><strong>Arte Couro</strong></a> - Todos os direitos reservados &copy;</p>
     </footer>
