@@ -137,6 +137,8 @@ function LoadProdutos(produtos) {
             const id = p.id
             const quantidade = p.quantidade
             database.RemoveProduto(id, quantidade);
+
+            requisitar('carrinho.html')
         }
 
         row.insertCell(4).append(btn);
