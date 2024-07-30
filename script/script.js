@@ -1,11 +1,12 @@
 // const crypto = require('node:crypto');
 
 class Produto {
-    constructor(id, nome, preco) {
+    constructor(id, nome, preco, url) {
         this.id = id
         this.nome = nome;
         this.preco = preco;
         this.quantidade = 1;
+        this.url = url
     }
 
     validateData() {
@@ -17,24 +18,24 @@ class Produto {
     }
 }
 
-function registerTask(id, nome, preco) {
+function registerTask(id, nome, preco, url) {
 
-    const produto = new Produto(id, nome, preco);
+    const produto = new Produto(id, nome, preco, url);
 
     if (produto.validateData()) {
         database.CreateProduto(produto);
     }
 }
 
-function GetId(number) {
-    let id = "";
-    for (let i = 0; i < (number * 8); i++) {
-        id += Math.round(Math.random() * 1);
-    }
-    let numeroDecimal = parseInt(id, 2);
-    let numeroHexadecimal = numeroDecimal.toString(16).toUpperCase();
-    return numeroHexadecimal;
-}
+// function GetId(number) {
+//     let id = "";
+//     for (let i = 0; i < (number * 8); i++) {
+//         id += Math.round(Math.random() * 1);
+//     }
+//     let numeroDecimal = parseInt(id, 2);
+//     let numeroHexadecimal = numeroDecimal.toString(16).toUpperCase();
+//     return numeroHexadecimal;
+// }
 
 class Database {
     constructor() {
@@ -57,7 +58,7 @@ class Database {
                 continue;
             }
 
-            produto.id = key;
+            // produto.id = key;
             produtos.push(produto);
         }
         return produtos;
@@ -81,10 +82,10 @@ class Database {
         localStorage.setItem('contador', (parseInt(contador) + 1));
     }
 
-    RemoveProduto(id) {
+    RemoveProduto(id, quantidade) {
         const contador = localStorage.getItem('contador');
         localStorage.removeItem(id);
-        localStorage.setItem('contador', (parseInt(contador) - 1));
+        localStorage.setItem('contador', (parseInt(contador) - quantidade));
     }
 
     SearchProdutos(nome) {
@@ -106,44 +107,80 @@ class Database {
 //     LoadProdutos(produtosS)
 // }
 
-// function LoadProdutos(produtos) {
+function LoadProdutos(produtos) {
 
-//     if (produtos === undefined) {
-//         produtos = database.GetProduto();
-//     }
+    if (produtos === undefined) {
+        produtos = database.GetProduto();
+    }
 
-//     // const produtos = database.GetProduto();
-//     const listprodutos = document.getElementById("list-produtos");
-//     listprodutos.innerHTML = '';
+    // const produtos = database.GetProduto();
+    const listprodutos = document.getElementById("list-produtos");
+    listprodutos.innerHTML = '';
 
-//     produtos.forEach((p) => {
-//         const row = listprodutos.insertRow();
-//         row.insertCell(0).innerHTML = `${p.nome}`;
-//         row.insertCell(1).innerHTML = `${p.preco}`;
-//         row.insertCell(2).innerHTML = `${p.quantidade}`;
-//         row.insertCell(3).innerHTML = `${p.descricao.substring(0, 40)}`;
+    let total = 0;
 
-//         const btn = document.createElement('button');
-//         btn.className = 'btn';
-//         btn.id = p.id;
-//         btn.innerHTML = 'Delete';
-//         btn.onclick = () => {
-//             const id = p.id
-//             database.RemoveProduto(id);
+    produtos.forEach((p) => {
 
-//             window.location.reload();
-//         }
+        total += (p.preco * p.quantidade)
 
-//         row.insertCell(4).append(btn);
-//     });
-// }
+        const row = listprodutos.insertRow();
+        row.insertCell(0).innerHTML = `<img src="${p.url}" class="img-carrinho col">`
+        row.insertCell(1).innerHTML = `<h2 class="nome-carrinho col">${p.nome}</h2>`;
+        row.insertCell(2).innerHTML = `<h4 class="text-danger fw-semibold valor-carrinho col">R$${(p.preco).toFixed(2)}</h4>`;
+        row.insertCell(3).innerHTML = `<h4 class="quantidade-carrinho col">${p.quantidade}</h4>`;
+
+        const btn = document.createElement('button');
+        btn.className = 'btn btn-dark';
+        btn.id = p.id;
+        btn.innerHTML = 'Delete';
+        btn.onclick = () => {
+            const id = p.id
+            const quantidade = p.quantidade
+            database.RemoveProduto(id, quantidade);
+        }
+
+        row.insertCell(4).append(btn);
+    });
+
+    const row = listprodutos.insertRow();
+    row.insertCell(0).innerHTML = `<h2 class="total-carrinho col">Total da compra</h2>`
+    row.insertCell(1).innerHTML = ''
+    row.insertCell(2).innerHTML = `<h4 class="text-danger fw-semibold valor-carrinho col">R$${total.toFixed(2)}</h4>`
+}
 
 // document.addEventListener("DOMContentLoaded", () => {
 //     if (document.body.contains(document.getElementById('list-produtos'))) {
 //         LoadProdutos();
 //     }
 // })
+
+function requisitar(url) {
+    document.getElementById('content').innerHTML = ''
+
+    let ajax = new XMLHttpRequest()
+
+    ajax.open('GET', url)
+
+    ajax.onreadystatechange = () => {
+        if (ajax.readyState == 4 && ajax.status == 200) {
+            document.getElementById('content').innerHTML = ajax.responseText
+            if (document.body.contains(document.getElementById('list-produtos'))) {
+                LoadProdutos()
+            }
+        }
+
+        if (ajax.readyState == 4 && ajax.status == 404) {
+            document.getElementById('content').innerHTML = 'Requisição finalizada, porém o recurso não foi encontrado. Erro 404.'
+        }
+    }
+
+    ajax.send()
+
+}
+
+
 document.addEventListener("DOMContentLoaded", () => {
+    requisitar('home.html')
     if (document.body.contains(document.getElementById('carrinho'))) {
         const carrinho = document.getElementById('carrinho')
         carrinho.textContent = localStorage.getItem('contador')
