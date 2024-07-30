@@ -180,7 +180,7 @@ function requisitar(url) {
 
 
 document.addEventListener("DOMContentLoaded", () => {
-    requisitar('home.html')
+    requisitar('./home.html')
     if (document.body.contains(document.getElementById('carrinho'))) {
         const carrinho = document.getElementById('carrinho')
         carrinho.textContent = localStorage.getItem('contador')
