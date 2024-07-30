@@ -1,5 +1,3 @@
-// const crypto = require('node:crypto');
-
 class Produto {
     constructor(id, nome, preco, url) {
         this.id = id
@@ -88,16 +86,16 @@ class Database {
         localStorage.setItem('contador', (parseInt(contador) - quantidade));
     }
 
-    SearchProdutos(nome) {
-        let produtosFiltrados = new Array();
-        produtosFiltrados = this.GetProduto();
+    // SearchProdutos(nome) {
+    //     let produtosFiltrados = new Array();
+    //     produtosFiltrados = this.GetProduto();
 
-        if (nome !== '') {
-            produtosFiltrados = produtosFiltrados.filter(p => p.nome === nome)
-        }
+    //     if (nome !== '') {
+    //         produtosFiltrados = produtosFiltrados.filter(p => p.nome === nome)
+    //     }
 
-        return produtosFiltrados;
-    }
+    //     return produtosFiltrados;
+    // }
 }
 
 // function SearchProdutos() {
@@ -149,12 +147,6 @@ function LoadProdutos(produtos) {
     row.insertCell(1).innerHTML = ''
     row.insertCell(2).innerHTML = `<h4 class="text-danger fw-semibold valor-carrinho col">R$${total.toFixed(2)}</h4>`
 }
-
-// document.addEventListener("DOMContentLoaded", () => {
-//     if (document.body.contains(document.getElementById('list-produtos'))) {
-//         LoadProdutos();
-//     }
-// })
 
 function requisitar(url) {
     document.getElementById('content').innerHTML = ''
