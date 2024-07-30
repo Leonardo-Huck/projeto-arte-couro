@@ -143,7 +143,7 @@ footer>p a {
 
 @media only screen and (max-width: 900px) {
     .destaque {
-        height: 16rem;
+        height: 20rem;
         background-attachment: inherit;
     }
 
@@ -174,6 +174,10 @@ footer>p a {
 }
 
 @media only screen and (max-width: 600px) {
+    .destaque {
+        height: 10rem;
+        background-attachment: inherit;
+    }
 
     .icone-card {
         width: 2rem;
