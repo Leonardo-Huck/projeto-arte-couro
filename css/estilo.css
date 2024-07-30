@@ -68,7 +68,7 @@ td {
     padding-bottom: 15rem;
     width: auto;
     background-repeat: no-repeat;
-    background-position: right 80% bottom 45%;
+    /* background-position: right 80% bottom 45%; */
     background-size: 100%;
     background-attachment: fixed;
 }
